@@ -8,7 +8,7 @@ WORKDIR /go/src/tcddbot
 RUN apk add --no-cache gcc musl-dev
 
 # Copy go mod files
-COPY go.mod ./
+COPY go.mod go.sum ./
 
 # Download dependencies
 RUN go mod download
