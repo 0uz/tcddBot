@@ -1,2 +1,3 @@
 .env
 botdb.*
+go.sum
