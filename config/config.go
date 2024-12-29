@@ -1,9 +1,11 @@
 package config
 
 import (
-    "github.com/joho/godotenv"
-    "os"
-    "time"
+	"fmt"
+	"os"
+	"time"
+
+	"github.com/joho/godotenv"
 )
 
 type Config struct {
@@ -18,7 +20,7 @@ type Config struct {
 
 func Load() (*Config, error) {
     if err := godotenv.Load("../.env"); err != nil {
-        return nil, err
+        fmt.Println("No .env file found")
     }
 
     return &Config{

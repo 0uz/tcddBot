@@ -20,7 +20,6 @@ import (
 	"tcddbot/worker"
 
 	"github.com/go-telegram-bot-api/telegram-bot-api/v5"
-	"github.com/joho/godotenv"
 )
 
 const NOTIFICATION_INTERVAL = 1 * time.Hour
@@ -59,12 +58,7 @@ func NewHandler(bot *tgbotapi.BotAPI, db *sql.DB, cfg *config.Config) *Handler {
 }
 
 func (h *Handler) loadStations() error {
-	err := godotenv.Load("../.env")
-	if err != nil {
-		return fmt.Errorf("error loading .env file: %w", err)
-	}
-
-	file, err := os.Open("../stations.json")
+	file, err := os.Open("./stations.json")
 	if err != nil {
 		return fmt.Errorf("error opening stations.json: %w", err)
 	}
