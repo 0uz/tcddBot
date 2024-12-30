@@ -129,9 +129,12 @@ func (h *Handler) handleStationSearch(update tgbotapi.Update) {
 
 	var matchingStations []string
 	h.stationsMux.RLock()
+	keywordLower := util.ToLowerTurkish(keyword)
 	for _, station := range h.stations {
-		if strings.Contains(strings.ToLower(station.Name), strings.ToLower(keyword)) ||
-			strings.Contains(strings.ToLower(station.CityName), strings.ToLower(keyword)) {
+		stationNameLower := util.ToLowerTurkish(station.Name)
+		cityNameLower := util.ToLowerTurkish(station.CityName)
+		if strings.Contains(stationNameLower, keywordLower) ||
+			strings.Contains(cityNameLower, keywordLower) {
 			matchingStations = append(matchingStations, fmt.Sprintf("%s (%s)", station.Name, station.CityName))
 		}
 	}
@@ -267,7 +270,7 @@ func (h *Handler) handleStationSelection(callback *tgbotapi.CallbackQuery) {
 
         // Check if arrival station is in departure station's pair_ids
         for _, pairID := range depStation.PairIDs {
-            if pairID == arrID {
+            if (pairID == arrID) {
                 validPair = true
                 break
             }
@@ -300,71 +303,6 @@ func (h *Handler) handleStationSelection(callback *tgbotapi.CallbackQuery) {
         msg.ReplyMarkup = &markup
         h.bot.Send(msg)
     }
-}
-
-func (h *Handler) createStationKeyboard(page int, filter string) *tgbotapi.InlineKeyboardMarkup {
-    var filteredStations []Station
-    h.stationsMux.RLock()
-    
-    // Get current state if any
-    chatID := int64(0) // You'll need to pass this from the calling function
-    h.statesMux.RLock()
-    state := h.userStates[chatID]
-    h.statesMux.RUnlock()
-
-    for _, station := range h.stations {
-        // If we're selecting arrival station, only show valid pairs
-        if state != nil && state.State == StateSelectArrival {
-            depID, _ := strconv.Atoi(state.DepartureStation)
-            if station.ID == depID {
-                continue // Skip departure station
-            }
-            // Only include stations that are valid pairs
-            var isValidPair bool
-            for _, s := range h.stations {
-                if s.ID == depID {
-                    for _, pairID := range s.PairIDs {
-                        if pairID == station.ID {
-                            isValidPair = true
-                            break
-                        }
-                    }
-                    break
-                }
-            }
-            if !isValidPair {
-                continue
-            }
-        }
-
-        if strings.Contains(strings.ToLower(station.Name), strings.ToLower(filter)) ||
-			strings.Contains(strings.ToLower(station.CityName), strings.ToLower(filter)) {
-            filteredStations = append(filteredStations, station)
-        }
-    }
-    h.stationsMux.RUnlock()
-
-    // If no stations found
-    if len(filteredStations) == 0 {
-        keyboard := [][]tgbotapi.InlineKeyboardButton{
-            {
-                tgbotapi.NewInlineKeyboardButtonData("❌ İstasyon bulunamadı, yeniden deneyin", "new_search"),
-            },
-        }
-        markup := tgbotapi.NewInlineKeyboardMarkup(keyboard...)
-        return &markup
-    }
-
-    var keyboard [][]tgbotapi.InlineKeyboardButton
-    for _, station := range filteredStations {
-		displayName := fmt.Sprintf("%s (%s)", station.Name, station.CityName)
-        keyboard = append(keyboard, []tgbotapi.InlineKeyboardButton{
-            tgbotapi.NewInlineKeyboardButtonData(displayName, "station_"+strconv.Itoa(station.ID)),
-        })
-    }
-
-    markup := tgbotapi.NewInlineKeyboardMarkup(keyboard...)
-    return &markup
 }
 
 func (h *Handler) createSubscription(chatID int64, departureStationID, arrivalStationID, travelDate string) {
@@ -415,9 +353,12 @@ func (h *Handler) HandleMessage(update tgbotapi.Update) {
 
         var matchingStations []Station
         h.stationsMux.RLock()
+        queryLower := util.ToLowerTurkish(query)
         for _, station := range h.stations {
-            if strings.Contains(strings.ToLower(station.Name), strings.ToLower(query)) ||
-				strings.Contains(strings.ToLower(station.CityName), strings.ToLower(query)) {
+            stationNameLower := util.ToLowerTurkish(station.Name)
+            cityNameLower := util.ToLowerTurkish(station.CityName)
+            if strings.Contains(stationNameLower, queryLower) ||
+				strings.Contains(cityNameLower, queryLower) {
                 matchingStations = append(matchingStations, station)
             }
         }

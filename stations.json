@@ -119,12 +119,6 @@
         "cityName": "DİYARBAKIR"
     },
     {
-        "id": 1357,
-        "name": "EU102 KM 59+108 MAKAS",
-        "pairs": [],
-        "cityName": "İSTANBUL"
-    },
-    {
         "id": 1356,
         "name": "SİRKECİ MR",
         "pairs": [],
@@ -2251,12 +2245,6 @@
         "cityName": "İZMİR"
     },
     {
-        "id": 1348,
-        "name": "KM 98+382",
-        "pairs": [],
-        "cityName": "KOCAELİ"
-    },
-    {
         "id": 93,
         "name": "ESKİŞEHİR",
         "pairs": [
@@ -2553,24 +2541,6 @@
         "cityName": "İSTANBUL"
     },
     {
-        "id": 494,
-        "name": "KM.45+492 MR",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 1175,
-        "name": "KM. 215+596 HT",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 1176,
-        "name": "KM. 224+482 HT",
-        "pairs": [],
-        "cityName": null
-    },
-    {
         "id": 1192,
         "name": "YILDIRIM SAYDİNGİ",
         "pairs": [
@@ -2643,7 +2613,7 @@
     },
     {
         "id": 1195,
-        "name": "BALASTOCAĞI SAYDİNGİ (KM 347+765)",
+        "name": "BALASTOCAĞI SAYDİNGİ",
         "pairs": [],
         "cityName": null
     },
@@ -2768,12 +2738,6 @@
             1196
         ],
         "cityName": "BARTIN"
-    },
-    {
-        "id": 419,
-        "name": "KM.85+597",
-        "pairs": [],
-        "cityName": null
     },
     {
         "id": 214,
@@ -3371,24 +3335,6 @@
         "cityName": "AMASYA"
     },
     {
-        "id": 430,
-        "name": "KM.1+290",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 454,
-        "name": "KM 649+760 (VARYANTBAŞI)",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 457,
-        "name": "KM 700+670 (VARYANTSONU)",
-        "pairs": [],
-        "cityName": null
-    },
-    {
         "id": 709,
         "name": "BAHÇETEPE",
         "pairs": [],
@@ -3396,7 +3342,7 @@
     },
     {
         "id": 855,
-        "name": "PAYAS ŞEHİR D. KM.38+075",
+        "name": "PAYAS ŞEHİR D.",
         "pairs": [
             747,
             753,
@@ -3414,26 +3360,6 @@
             1339
         ],
         "cityName": "HATAY"
-    },
-    {
-        "id": 758,
-        "name": "KM 11+100",
-        "pairs": [
-            631,
-            633,
-            635,
-            642,
-            657,
-            682,
-            688,
-            693,
-            704,
-            722,
-            1109,
-            1310,
-            1311
-        ],
-        "cityName": "DİYARBAKIR"
     },
     {
         "id": 722,
@@ -3484,18 +3410,6 @@
             1340
         ],
         "cityName": "BİNGÖL"
-    },
-    {
-        "id": 1326,
-        "name": "AS04 KM.44+471 MAKAS",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 1327,
-        "name": "AS03 KM.44+558 MAKAS",
-        "pairs": [],
-        "cityName": null
     },
     {
         "id": 1330,
@@ -3555,12 +3469,6 @@
         "cityName": null
     },
     {
-        "id": 1341,
-        "name": "KM  0+936/0+000",
-        "pairs": [],
-        "cityName": null
-    },
-    {
         "id": 1344,
         "name": "TAŞLICA",
         "pairs": [],
@@ -3573,56 +3481,12 @@
         "cityName": "İSTANBUL"
     },
     {
-        "id": 1349,
-        "name": "EU103 KM 59+220 MAKAS",
-        "pairs": [],
-        "cityName": "İSTANBUL"
-    },
-    {
         "id": 1355,
         "name": "YENİKAPI MR",
         "pairs": [],
         "cityName": "İSTANBUL"
     },
-    {
-        "id": 1350,
-        "name": "AS01 KM 44+679 MAKAS",
-        "pairs": [],
-        "cityName": "İSTANBUL"
-    },
-    {
-        "id": 1353,
-        "name": "EU100 KM 58+957 MAKAS",
-        "pairs": [],
-        "cityName": "İSTANBUL"
-    },
-    {
-        "id": 1207,
-        "name": "KM. 251+485",
-        "pairs": [
-            287,
-            288,
-            301,
-            320,
-            321,
-            322,
-            331,
-            341,
-            350,
-            353,
-            354,
-            358,
-            362,
-            370,
-            374,
-            378,
-            388,
-            395,
-            1055,
-            1385
-        ],
-        "cityName": "DENİZLİ"
-    },
+
     {
         "id": 1314,
         "name": "ÇAYIROVA SAYDİNG",
@@ -3632,12 +3496,6 @@
     {
         "id": 944,
         "name": "MAHMUDİYE",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 748,
-        "name": "KM.262+646",
         "pairs": [],
         "cityName": null
     },
@@ -4277,12 +4135,6 @@
         "cityName": "ZONGULDAK"
     },
     {
-        "id": 1073,
-        "name": "KM. 345+500",
-        "pairs": [],
-        "cityName": null
-    },
-    {
         "id": 13,
         "name": "BOZÜYÜK",
         "pairs": [
@@ -4706,14 +4558,8 @@
         "cityName": null
     },
     {
-        "id": 1139,
-        "name": "KM. 123+400 HT",
-        "pairs": [],
-        "cityName": null
-    },
-    {
         "id": 1345,
-        "name": "KM 331+985 ŞEFKAT BAŞ MAKAS",
+        "name": "ŞEFKAT BAŞ MAKAS",
         "pairs": [],
         "cityName": null
     },
@@ -9976,17 +9822,6 @@
             1158
         ],
         "cityName": "TOKAT"
-    },
-    {
-        "id": 627,
-        "name": "KM.102+600",
-        "pairs": [
-            637,
-            670,
-            683,
-            701
-        ],
-        "cityName": "BATMAN"
     },
     {
         "id": 632,
@@ -15676,12 +15511,6 @@
         "cityName": "İZMİR"
     },
     {
-        "id": 425,
-        "name": "KM.1+164",
-        "pairs": [],
-        "cityName": null
-    },
-    {
         "id": 318,
         "name": "GAZİEMİR",
         "pairs": [
@@ -18261,26 +18090,8 @@
         "cityName": "TOKAT"
     },
     {
-        "id": 1140,
-        "name": "KM. 146+338 HT",
-        "pairs": [],
-        "cityName": null
-    },
-    {
         "id": 1141,
         "name": "PAMUKOVA YHT",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 1143,
-        "name": "KM. 221+401 HT",
-        "pairs": [],
-        "cityName": null
-    },
-    {
-        "id": 1144,
-        "name": "KM. 222+399 HT",
         "pairs": [],
         "cityName": null
     },
@@ -18571,7 +18382,7 @@
     },
     {
         "id": 1305,
-        "name": "BURMAHAN (KM.801+150)",
+        "name": "BURMAHAN",
         "pairs": [
             445,
             465,
@@ -19364,7 +19175,7 @@
     },
     {
         "id": 431,
-        "name": "BAHÇELİ (KM.755+290 S)",
+        "name": "BAHÇELİ",
         "pairs": [
             154,
             420,
