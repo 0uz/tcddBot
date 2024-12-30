@@ -25,9 +25,10 @@ import (
 const NOTIFICATION_INTERVAL = 1 * time.Hour
 
 type Station struct {
-	ID      int    `json:"id"`
-	Name    string `json:"name"`
-	PairIDs []int  `json:"pairs"`
+	ID       int    `json:"id"`
+	Name     string `json:"name"`
+	CityName string `json:"cityName"`
+	PairIDs  []int  `json:"pairs"`
 }
 
 type Handler struct {
@@ -129,8 +130,9 @@ func (h *Handler) handleStationSearch(update tgbotapi.Update) {
 	var matchingStations []string
 	h.stationsMux.RLock()
 	for _, station := range h.stations {
-		if strings.Contains(strings.ToLower(station.Name), strings.ToLower(keyword)) {
-			matchingStations = append(matchingStations, station.Name)
+		if strings.Contains(strings.ToLower(station.Name), strings.ToLower(keyword)) ||
+			strings.Contains(strings.ToLower(station.CityName), strings.ToLower(keyword)) {
+			matchingStations = append(matchingStations, fmt.Sprintf("%s (%s)", station.Name, station.CityName))
 		}
 	}
 	h.stationsMux.RUnlock()
@@ -335,7 +337,8 @@ func (h *Handler) createStationKeyboard(page int, filter string) *tgbotapi.Inlin
             }
         }
 
-        if strings.Contains(strings.ToLower(station.Name), strings.ToLower(filter)) {
+        if strings.Contains(strings.ToLower(station.Name), strings.ToLower(filter)) ||
+			strings.Contains(strings.ToLower(station.CityName), strings.ToLower(filter)) {
             filteredStations = append(filteredStations, station)
         }
     }
@@ -354,8 +357,9 @@ func (h *Handler) createStationKeyboard(page int, filter string) *tgbotapi.Inlin
 
     var keyboard [][]tgbotapi.InlineKeyboardButton
     for _, station := range filteredStations {
+		displayName := fmt.Sprintf("%s (%s)", station.Name, station.CityName)
         keyboard = append(keyboard, []tgbotapi.InlineKeyboardButton{
-            tgbotapi.NewInlineKeyboardButtonData(station.Name, "station_"+strconv.Itoa(station.ID)),
+            tgbotapi.NewInlineKeyboardButtonData(displayName, "station_"+strconv.Itoa(station.ID)),
         })
     }
 
@@ -412,7 +416,8 @@ func (h *Handler) HandleMessage(update tgbotapi.Update) {
         var matchingStations []Station
         h.stationsMux.RLock()
         for _, station := range h.stations {
-            if strings.Contains(strings.ToLower(station.Name), strings.ToLower(query)) {
+            if strings.Contains(strings.ToLower(station.Name), strings.ToLower(query)) ||
+				strings.Contains(strings.ToLower(station.CityName), strings.ToLower(query)) {
                 matchingStations = append(matchingStations, station)
             }
         }
@@ -426,8 +431,9 @@ func (h *Handler) HandleMessage(update tgbotapi.Update) {
 
         var keyboard [][]tgbotapi.InlineKeyboardButton
         for _, station := range matchingStations {
+			displayName := fmt.Sprintf("%s (%s)", station.Name, station.CityName)
             keyboard = append(keyboard, []tgbotapi.InlineKeyboardButton{
-                tgbotapi.NewInlineKeyboardButtonData(station.Name, "station_"+strconv.Itoa(station.ID)),
+                tgbotapi.NewInlineKeyboardButtonData(displayName, "station_"+strconv.Itoa(station.ID)),
             })
         }
 

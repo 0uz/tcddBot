@@ -1,0 +1,893 @@
+[
+    {
+        "id": 4,
+        "name": "AĞRI",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 2,
+        "name": "ADIYAMAN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 3,
+        "name": "AFYONKARAHİSAR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 1,
+        "name": "ADANA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 51,
+        "name": "NİĞDE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 74,
+        "name": "BARTIN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 56,
+        "name": "SİİRT",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 76,
+        "name": "IĞDIR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 21,
+        "name": "DİYARBAKIR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 24,
+        "name": "ERZİNCAN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 13,
+        "name": "BİTLİS",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 33,
+        "name": "MERSİN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 20,
+        "name": "DENİZLİ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 64,
+        "name": "UŞAK",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 14,
+        "name": "BOLU",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 65,
+        "name": "VAN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 46,
+        "name": "KAHRAMANMARAŞ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 66,
+        "name": "YOZGAT",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 62,
+        "name": "TUNCELİ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 38,
+        "name": "KAYSERİ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 5,
+        "name": "AMASYA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 16,
+        "name": "BURSA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 69,
+        "name": "BAYBURT",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 15,
+        "name": "BURDUR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 29,
+        "name": "GÜMÜŞHANE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 57,
+        "name": "SİNOP",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 22,
+        "name": "EDİRNE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 63,
+        "name": "ŞANLIURFA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 40,
+        "name": "KIRŞEHİR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 36,
+        "name": "KARS",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 7,
+        "name": "ANTALYA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 9,
+        "name": "AYDIN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 52,
+        "name": "ORDU",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 42,
+        "name": "KONYA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 30,
+        "name": "HAKKARİ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 11,
+        "name": "BİLECİK",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 10,
+        "name": "BALIKESİR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 70,
+        "name": "KARAMAN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 61,
+        "name": "TRABZON",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 78,
+        "name": "KARABÜK",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 23,
+        "name": "ELAZIĞ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 55,
+        "name": "SAMSUN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 49,
+        "name": "MUŞ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 19,
+        "name": "ÇORUM",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 12,
+        "name": "BİNGÖL",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 68,
+        "name": "AKSARAY",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 28,
+        "name": "GİRESUN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 80,
+        "name": "OSMANİYE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 50,
+        "name": "NEVŞEHİR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 37,
+        "name": "KASTAMONU",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 26,
+        "name": "ESKİŞEHİR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 45,
+        "name": "MANİSA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 43,
+        "name": "KÜTAHYA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 18,
+        "name": "ÇANKIRI",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 34,
+        "name": "İSTANBUL",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 53,
+        "name": "RİZE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 71,
+        "name": "KIRIKKALE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 48,
+        "name": "MUĞLA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 27,
+        "name": "GAZİANTEP",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 44,
+        "name": "MALATYA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 41,
+        "name": "KOCAELİ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 79,
+        "name": "KİLİS",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 32,
+        "name": "ISPARTA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 17,
+        "name": "ÇANAKKALE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 77,
+        "name": "YALOVA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 8,
+        "name": "ARTVİN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 54,
+        "name": "SAKARYA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 31,
+        "name": "HATAY",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 47,
+        "name": "MARDİN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 6,
+        "name": "ANKARA",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 60,
+        "name": "TOKAT",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 59,
+        "name": "TEKİRDAĞ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 81,
+        "name": "DÜZCE",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 72,
+        "name": "BATMAN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 35,
+        "name": "İZMİR",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 39,
+        "name": "KIRKLARELİ",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 67,
+        "name": "ZONGULDAK",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 75,
+        "name": "ARDAHAN",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 25,
+        "name": "ERZURUM",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 73,
+        "name": "ŞIRNAK",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    },
+    {
+        "id": 58,
+        "name": "SİVAS",
+        "country": {
+            "id": 1,
+            "name": "TÜRKİYE",
+            "code": "TR"
+        },
+        "latitude": 0,
+        "longitude": 0
+    }
+]
