@@ -340,7 +340,6 @@ func (h *Handler) HandleMessage(update tgbotapi.Update) {
     }
 
     if state.State == StateSelectDeparture || state.State == StateSelectArrival {
-        // Handle station search
         query := strings.TrimSpace(update.Message.Text)
         if len(query) < 2 {
             msg := tgbotapi.NewMessage(chatID, "❌ *Çok Kısa Arama*\n\n"+
@@ -354,18 +353,60 @@ func (h *Handler) HandleMessage(update tgbotapi.Update) {
         var matchingStations []Station
         h.stationsMux.RLock()
         queryLower := util.ToLowerTurkish(query)
+        
+        // Get departure station if we're in arrival selection state
+        var departureStation Station
+        var validPairs map[int]bool
+        if state.State == StateSelectArrival {
+            depID, _ := strconv.Atoi(state.DepartureStation)
+            for _, station := range h.stations {
+                if station.ID == depID {
+                    departureStation = station
+                    // Create a map of valid pair IDs for quick lookup
+                    validPairs = make(map[int]bool)
+                    for _, pairID := range station.PairIDs {
+                        validPairs[pairID] = true
+                    }
+                    break
+                }
+            }
+        }
+
+        // Filter stations based on search query and valid pairs
         for _, station := range h.stations {
             stationNameLower := util.ToLowerTurkish(station.Name)
             cityNameLower := util.ToLowerTurkish(station.CityName)
+            
+            // For arrival station selection, only include valid pairs
+            if state.State == StateSelectArrival {
+                if station.ID == departureStation.ID {
+                    continue // Skip departure station
+                }
+                if !validPairs[station.ID] {
+                    continue // Skip stations that aren't valid pairs
+                }
+            }
+
             if strings.Contains(stationNameLower, queryLower) ||
-				strings.Contains(cityNameLower, queryLower) {
+               strings.Contains(cityNameLower, queryLower) {
                 matchingStations = append(matchingStations, station)
             }
         }
         h.stationsMux.RUnlock()
 
         if len(matchingStations) == 0 {
-            msg := tgbotapi.NewMessage(chatID, "Bu arama için istasyon bulunamadı. Lütfen farklı bir arama yapın.")
+            var msgText string
+            if state.State == StateSelectArrival {
+                msgText = "❌ *Uygun İstasyon Bulunamadı*\n\n" +
+                    "Seçtiğiniz kalkış istasyonundan girdiğiniz konuma sefer bulunmamaktadır.\n" +
+                    "💡 Farklı bir varış noktası deneyin veya /abone yazarak baştan başlayın."
+            } else {
+                msgText = "❌ *İstasyon Bulunamadı*\n\n" +
+                    "Aradığınız kalkış istasyonu bulunamadı.\n" +
+                    "💡 Farklı bir arama yapın veya kısmi kelime kullanın."
+            }
+            msg := tgbotapi.NewMessage(chatID, msgText)
+            msg.ParseMode = "Markdown"
             h.bot.Send(msg)
             return
         }
