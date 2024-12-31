@@ -67,7 +67,7 @@ func NewHandler(bot *tgbotapi.BotAPI, db *sql.DB, cfg *config.Config) *Handler {
 }
 
 func (h *Handler) loadStations() error {
-	file, err := os.Open("../stations.json")
+	file, err := os.Open("./stations.json")
 	if (err != nil) {
 		return fmt.Errorf("error opening stations.json: %w", err)
 	}
