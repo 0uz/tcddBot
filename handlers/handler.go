@@ -56,6 +56,10 @@ func NewHandler(bot *tgbotapi.BotAPI, db *sql.DB, cfg *config.Config) *Handler {
 		log.Printf("Error loading stations: %v", err)
 	}
 
+	if err := h.initializeTables(); err != nil {
+		log.Printf("Error initializing tables: %v", err)
+	}
+
 	// Initialize worker pool with 5 workers and 100 queue size
 	h.workerPool = worker.NewPool(5, 100, h.processSubscription)
 
@@ -63,7 +67,7 @@ func NewHandler(bot *tgbotapi.BotAPI, db *sql.DB, cfg *config.Config) *Handler {
 }
 
 func (h *Handler) loadStations() error {
-	file, err := os.Open("./stations.json")
+	file, err := os.Open("../stations.json")
 	if (err != nil) {
 		return fmt.Errorf("error opening stations.json: %w", err)
 	}
@@ -83,8 +87,57 @@ func (h *Handler) loadStations() error {
 	return nil
 }
 
+// Add this new method after NewHandler
+func (h *Handler) initializeTables() error {
+    _, err := h.db.Exec(`
+        CREATE TABLE IF NOT EXISTS users (
+            chat_id INTEGER PRIMARY KEY,
+            username TEXT,
+            first_name TEXT,
+            last_name TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )`)
+    return err
+}
+
 // Update HandleUpdate to handle non-command messages
 func (h *Handler) HandleUpdate(ctx context.Context, update tgbotapi.Update) {
+    if update.Message != nil {
+        // Check if this is a new user
+        var count int
+        err := h.db.QueryRow("SELECT COUNT(*) FROM users WHERE chat_id = ?", update.Message.Chat.ID).Scan(&count)
+        if err != nil {
+            log.Printf("Error checking user existence: %v", err)
+        }
+
+        if count == 0 {
+            // New user, save to database and notify admin
+            username := update.Message.From.UserName
+            if username == "" {
+                username = "Ayarlanmamış"
+            }
+            firstName := update.Message.From.FirstName
+            if firstName == "" {
+                firstName = "Ayarlanmamış"
+            }
+            lastName := update.Message.From.LastName
+            if lastName == "" {
+                lastName = "Ayarlanmamış"
+            }
+
+            _, err := h.db.Exec(`
+                INSERT INTO users (chat_id, username, first_name, last_name)
+                VALUES (?, ?, ?, ?)`,
+                update.Message.Chat.ID, username, firstName, lastName)
+            
+            if err != nil {
+                log.Printf("Error saving new user: %v", err)
+            } else {
+                h.notifyAdmin(update.Message.Chat.ID, username, firstName, lastName)
+            }
+        }
+    }
+
     if update.CallbackQuery != nil {
         h.handleCallback(ctx, update.CallbackQuery)
         return
@@ -836,4 +889,40 @@ func (h *Handler) handleDateSelection(callback *tgbotapi.CallbackQuery, selected
     h.statesMux.Lock()
     delete(h.userStates, chatID)
     h.statesMux.Unlock()
+}
+
+// Add this new method
+func (h *Handler) notifyAdmin(newUserID int64, username, firstName, lastName string) {
+    totalUsers, err := h.getUserStats()
+    if err != nil {
+        log.Printf("Error getting user stats: %v", err)
+        totalUsers = 0
+    }
+
+    msgText := fmt.Sprintf("🆕 *Yeni Kullanıcı Bildirimi*\n\n"+
+        "👤 *Kullanıcı Bilgileri:*\n"+
+        "• ID: `%d`\n"+
+        "• Kullanıcı Adı: %s\n"+
+        "• İsim: %s\n"+
+        "• Soyisim: %s\n\n"+
+        "📊 *İstatistikler:*\n"+
+        "• Toplam Kullanıcı: %d\n\n"+
+        "🕒 Tarih: %s",
+        newUserID,
+        username,
+        firstName,
+        lastName,
+        totalUsers,
+        time.Now().Format("02.01.2006 15:04:05"))
+
+    msg := tgbotapi.NewMessage(h.cfg.AdminChatID, msgText)
+    msg.ParseMode = "Markdown"
+    h.bot.Send(msg)
+}
+
+// Add this new method for admin statistics
+func (h *Handler) getUserStats() (int, error) {
+    var count int
+    err := h.db.QueryRow("SELECT COUNT(*) FROM users").Scan(&count)
+    return count, err
 }

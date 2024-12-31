@@ -1,11 +1,12 @@
 package config
 
 import (
-	"fmt"
-	"os"
-	"time"
+    "fmt"
+    "os"
+    "strconv"
+    "time"
 
-	"github.com/joho/godotenv"
+    "github.com/joho/godotenv"
 )
 
 type Config struct {
@@ -16,6 +17,7 @@ type Config struct {
     UnitID           string
     CheckInterval     time.Duration
     CleanupInterval   time.Duration
+    AdminChatID       int64 `envconfig:"ADMIN_CHAT_ID" required:"true"`
 }
 
 func Load() (*Config, error) {
@@ -30,6 +32,7 @@ func Load() (*Config, error) {
         AuthToken:      os.Getenv("AUTHORIZATION_TOKEN"),
         UnitID:        "3895",
         CheckInterval:  5 * time.Second,
-        CleanupInterval: 1 * time.Hour,
+        CleanupInterval: 1 * time.Hour, // Add default cleanup interval
+        AdminChatID:    func() int64 { id, _ := strconv.ParseInt(os.Getenv("ADMIN_CHAT_ID"), 10, 64); return id }(),
     }, nil
 }
